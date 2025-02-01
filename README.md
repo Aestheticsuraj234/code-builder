@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Powered Code Generation Application
 
-## Getting Started
+This project is a web application that leverages AI to assist developers in generating code snippets and understanding code structures. Built with modern technologies, it offers a seamless and efficient user experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **AI-Powered Code Generation:** Utilizes a locally running DeepSeek model to generate code snippets based on user prompts.
+- **Interactive File Structure:** Displays a dynamic file structure that updates in real-time as code is generated.
+- **Responsive Design:** Ensures optimal viewing across various devices using Tailwind CSS.
+- **Reusable Components:** Employs Shadcn UI components for a consistent and customizable UI.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js:** A React framework for building server-side rendered applications.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **Shadcn UI:** A library of customizable UI components based on Tailwind CSS.
+- **TypeScript:** A superset of JavaScript that adds static typing.
+- **Prisma:** An ORM for Node.js and TypeScript, facilitating database interactions.
+- **MongoDB:** A NoSQL database for storing user data and generated code snippets.
+- **DeepSeek:** A locally running AI model for code generation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup and Installation
 
-## Learn More
+1. **Clone the Repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/Aestheticsuraj234/code-builder.git
+   cd code-builder
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Set Up Environment Variables:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Create a `.env.local` file in the root directory and add the following variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   DEEPSEEK_API_URL=http://localhost:5000/generate
+   ```
+
+   Replace `your_mongodb_connection_string` with your actual MongoDB connection string.
+
+4. **Run the Application:**
+
+   ```bash
+   npm run dev
+   ```
+
+   The application will be accessible at `http://localhost:3000`.
+
+## Usage
+
+- **Generate Code Snippets:** Enter a prompt in the input field, and the AI will generate a corresponding code snippet.
+- **Explore File Structure:** Navigate through the dynamically generated file structure to view related code files.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+For more detailed guides on integrating Shadcn UI with Next.js and Tailwind CSS, you can refer to the following resources:
+
+- [How to use Shadcn UI with NextJS and Tailwind CSS](https://mydevpa.ge/blog/how-to-use-shadcn-ui-with-nextjs-and-tailwind-css)
+- [Next.js, Tailwind CSS and Shadcn-ui template](https://dev.to/hunchodotdev/nextjs-tailwind-css-and-shadcn-ui-template-528n)
+
+These guides provide step-by-step instructions and best practices for setting up and customizing your application. 
