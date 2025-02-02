@@ -7,5 +7,4 @@ const AuthLayout = ({children}:{children:React.ReactNode}) => {
     </main>
   )
 }
-
 export default AuthLayout
