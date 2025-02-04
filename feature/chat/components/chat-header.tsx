@@ -11,7 +11,7 @@ interface Props{
 }
 const ChatHeader = ({userImage , chatTitle}:Props) => {
   return (
-    <div className='flex flex-row justify-center items-center gap-2'>
+    <div className='flex flex-row justify-start items-center gap-2'>
         <Avatar>
       <AvatarImage src={userImage!} alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>

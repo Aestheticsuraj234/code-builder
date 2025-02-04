@@ -27,7 +27,7 @@ const formSchema = z.object({
 
 export default function ChatTextarea() {
   const router = useRouter();
-  const { setPrompts, setUiPrompts } = useChatStore();
+  const { setPrompts, setUiPrompts , setTemplateSet } = useChatStore();
   const [showUpgrade, setShowUpgrade] = useState(true);
   const [isPending, setIsPending] = useState(false);
 
@@ -54,6 +54,7 @@ export default function ChatTextarea() {
       const { prompts, uiPrompts, newMessage } = response.data;
       setPrompts(prompts);
       setUiPrompts(uiPrompts);
+      setTemplateSet(true)
       toast.success("Chat Created Successfully Redirecting....");
       if (prompts && uiPrompts && newMessage) {
         router.push(`/chat/${newMessage.id}`);
@@ -76,7 +77,7 @@ export default function ChatTextarea() {
             <div className="flex items-center gap-2">
               <Button
                 variant="link"
-                className="text-primary hover:text-primary/90"
+                className="text-yellow-400 hover:text-primary/90"
                 onClick={() => console.log("Upgrade clicked")}
               >
                 Upgrade Plan
@@ -105,7 +106,7 @@ export default function ChatTextarea() {
                       <div className="relative">
                         <Textarea
                           placeholder="Ask v0 a question..."
-                          className="min-h-[100px] resize-none pr-24 border-0 px-4 py-4"
+                          className="min-h-[100px] resize-none pr-24 border-0 px-4 py-4 bg-[rgb(20,21,20)]"
                           rows={5}
                           {...field}
                         />
@@ -142,6 +143,7 @@ export default function ChatTextarea() {
             <Button
               key={action}
               variant="outline"
+              className="bg-[rgb(20,21,20)]"
               size="sm"
               onClick={() => console.log(`${action} clicked`)}
             >

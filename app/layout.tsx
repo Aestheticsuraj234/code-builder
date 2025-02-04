@@ -27,7 +27,7 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <body className={`${poppins.className}`}>
+        <body className={`${poppins.className} `}>
           {" "}
           <ThemeProvider
             attribute="class"

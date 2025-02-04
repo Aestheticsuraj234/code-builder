@@ -12,6 +12,8 @@ interface ChatStore {
   setUiPrompts: (uiPrompts: string[]) => void;
   // Optionally, a function to reset the state
   reset: () => void;
+  templateSet:boolean;
+  setTemplateSet:(templateSet:boolean) => void;
 }
 
 export const useChatStore = create<ChatStore>((set) => ({
@@ -20,4 +22,6 @@ export const useChatStore = create<ChatStore>((set) => ({
   setPrompts: (prompts: string[]) => set({ prompts }),
   setUiPrompts: (uiPrompts: string[]) => set({ uiPrompts }),
   reset: () => set({ prompts: [], uiPrompts: [] }),
+  templateSet:false,
+  setTemplateSet:(templateSet:boolean)=>set({templateSet})
 }));
